@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<head>
+    <title>Registration Form</title>
+    
+       <link href="mystyle.css" rel="stylesheet" type="text/css">
+
+    
+    <!-- <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script> -->
+
+</head>
+<body class="reg">
+    <nav>
+        <a>
+        <img src="urs.jpg" class="lod">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="Alumni.html">Alumni</a></li>
+            <li><a href="staff.html">Staff</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+    <form class="form" id=" register form" action="register.php" method="POST">
+    <h1><img src="ree.png" class="vis">REGISTER HERE</h1>
+<div class="form-control">
+    <label>First Name:</label>
+<input type="text" name="fname" id="fname" placeholder="eg Halima" required>
+<div class="error"></div>
+</div>
+<div class="form-control">
+    <label>Middle Name:</label>
+<input type="text" name="mname" id="mname" placeholder="eg Hassan" required>
+<div class="error"></div>
+</div>
+<div class="form-control">
+    <label>Surname:</label>
+<input type="text" name="sname" id="sname" placeholder=" eg Lugela" required>
+<div class="error"></div>
+</div>
+
+<div class="form-control">
+    <label>Username:</label>
+<input type="text" name="uname" id="uname" required>
+<div class="error"></div>
+</div>
+<div class="form-control">
+    <label>Mobile number:</label>
+<input type="number" name="mnumber" id="mnumber" placeholder="eg 0712344567">
+<div class="error"></div>
+</div>
+<div class="form-control">
+    <label>Date of Birth:</label>
+<input type="date" name="dob" id="dob" placeholder="eg 12/12/2003">
+</div>
+<div class="form-control">
+    <label>Password:</label>
+<input type="password" name="password" id="password"  required>
+<div class="error"></div>
+</div>
+<div class="form-control">
+    <label>Email:</label>
+<input type="email" name="email" id="email"><br>
+<div class="error"></div>
+<div class="form-control">
+    <label>Facebook Account:</label>
+<input type="text" name="fa" id="fa">
+<div class="error"></div>
+</div>
+<div class="form-control">
+    <label>Instagram Account:</label>
+<input type="text" name="insta" id="ia">
+<div class="error"></div>
+</div>
+<div class="form-control">
+    <label>Twitter:</label>
+<input type="text" name="twit" id="ta">
+<div class="error"></div>
+</div>
+<div>
+    <p>CV</p>
+ <input type="file" name="file" accept="" id="file">
+ </div>
+<div>
+    <input type="submit" id="sbutton" value="submit"><br>
+ <p>Already have an account? <a href="loginform.php">Log in here</a></p>
+</div>
+</form>
+    </div>
+    <script type="text/javascript">
+const form= document.getElementById("register form")
+form.addEventlistener('submit',(e)=>{
+    e.preventDefault()
+    let email=document.getElementById('email')
+    let password=document.getElementById('password')
+    if(validateEmail(email.value) && validatePassword(password.value)){
+        form.submit()
+    }
+})
+const validateEmail = (email)=>{
+    if(!(/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/.test(email))){
+        alert('Email invalid')
+        return false
+    }
+    return true
+}
+const validatePassword = (password) =>{
+    if(password.length<8){
+        alert("Password must have minimum of 8 characters")
+        return false
+    }
+    if(!(/\w+/.test(password))){
+        alert('Password must contain atleast 1 alphanumeric character')
+        return false
+    }
+    if(!(/['!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(password))){
+        alert('Password must contain atleast 1 special character')
+        return false
+    }
+    return true
+}
+    </script>
+</body>
+</html>

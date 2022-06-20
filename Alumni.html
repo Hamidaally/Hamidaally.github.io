@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<head>
+    <title>Alumni</title>
+    <link href="mystyle.css" rel="stylesheet" type="text/css">
+    <style>
+    body{
+        background: rgb(50, 94, 97);
+        align-items: center;
+    padding: 80px; 
+    padding-top: 50px;
+
+    }
+
+    </style>
+</head>
+<body>
+    <nav>
+            
+        <img src="urs.jpg" class="lod">
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="Alumni.html">Alumni</a></li>
+            <li><a href="staff.html">Staff</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+    </nav>
+    
+        <form method="post"  action="Alumni.php">
+            <h1> Welcome Alumnus </h1>
+            <table>
+                <tr>
+                    <td>Alumnus name:</td>
+                   <td><input type="text" name="alumnus" id="alumnus" maxlength="30" required></td> 
+                </tr>
+                <tr>
+                    <td>Year of enrolment:</td>
+                   <td>
+                    <select name="enrol" required>
+                        <option value=""></option>
+                        <option >2012</option>
+                        <option >2013</option>
+                        <option >2014</option>
+                        <option >2015</option>
+                        <option >2016</option>
+                        <option >2017</option>
+                        <option >2018</option>
+                        <option >2019</option>
+                        <option >2020</option>
+                        <option >2021</option>
+                    </select>
+                   </td>
+                </tr>
+                <tr>
+                    <td>Year of graduation:</td>
+                   <td>
+                    <select name="grad" required>
+                        <option value=""></option>
+                        <option >2012</option>
+                        <option >2013</option>
+                        <option >2014</option>
+                        <option >2015</option>
+                        <option >2016</option>
+                        <option >2017</option>
+                        <option >2018</option>
+                        <option >2019</option>
+                        <option >2020</option>
+                        <option >2021</option>
+                    </select>
+                   </td>
+                </tr>
+                <tr>
+                    <td>Headmaster(mistress) at the time of enrollment:</td>
+                   <td>
+                    <select name="headse" maxlength="30" required>
+                        <option value=""></option>
+                        <option >Sister Leena Mathias</option>
+                        <option >Sister Sunita Vas</option>
+                        <option >Sister Sahaya</option>
+                    </select>
+                   </td>
+                </tr>
+                <tr>
+                    <td>Headmaster(mistress) at the time of graduation:</td>
+                   <td>
+                    <select name="heads"  maxlength="30"  required>
+                        <option value=""></option>
+                        <option >Sister Leena Mathias</option>
+                        <option >Sister Sunita Vas</option>
+                        <option >Sister Sahaya</option>
+                    </select>
+                   </td>
+                </tr>
+                <tr>
+                    <td>Famous teacher at time of graduation:</td>
+                   <td>
+                    <select name="fame" maxlength="30">
+                        <option value=""></option>
+                        <option >Mr.Reagan</option>
+                        <option >Mr.William</option>
+                        <option >Mr.Omary</option>
+                        <option >Mr.Edgar</option>
+                    </select>
+                   </td>
+                </tr>
+                
+                <tr>
+                    <td>Results summary:</td>
+                   <td>
+                    <select name="results">
+                        <option value=""></option>
+                        <option >Div 1</option>
+                        <option >Div 2</option>
+                        <option >Div 3</option>
+                        <option >Div 4</option>
+                    </select>
+                   </td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><input type="text" name="address"></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td>Current occupation:</td>
+                    <td><input type="text" name="occupation" maxlength="20"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                <td><input type="password" name="pword" id="pword"></td>
+                </tr>
+                <tr>
+                    <td>Mobile number:</td>
+                    <td><input type="tel" name="mnumber"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="sbutton" value="SUBMIT"></td>
+                    <td><input type="reset" name="rbutton" value="RESET"></td>
+                </tr>
+            </table>
+        </form>
+    
+</body>
+</html>
